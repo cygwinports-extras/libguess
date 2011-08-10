@@ -1,0 +1,5 @@
+category: Libs
+requires: libguess1 libmowgli-devel
+external-source: libguess
+sdesc: "Character set detection library (development)"
+ldesc: "A high-speed character set detection library used by Audacious."

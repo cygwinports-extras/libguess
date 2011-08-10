@@ -1,0 +1,20 @@
+DESCRIPTION="Character set detection library"
+HOMEPAGE="http://www.atheme.org/project/libguess"
+SRC_URI="http://distfiles.atheme.org/${P}.tgz"
+PATCH_URI="1.0-buildsys.patch"
+
+PKG_NAMES="libguess1 libguess-devel"
+libguess1_CONTENTS="usr/bin/cygguess-1.dll"
+libguess_devel_CONTENTS="usr/include/ usr/lib/ usr/share/doc/"
+
+NO_AUTOPOINT=1
+NO_ACLOCAL=1
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	lndirs
+	cd ${B}
+	cygconf
+	cygmake
+}

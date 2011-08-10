@@ -1,0 +1,3 @@
+category: Libs
+sdesc: "Character set detection library (sources)"
+ldesc: "A high-speed character set detection library used by Audacious."
